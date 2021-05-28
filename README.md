@@ -34,7 +34,7 @@ done
 ## Query
 ```python
 >>> import tiles
-# Load file index to accession maps.
+# Load accession to file index maps.
 >> tiles.load_maps('regions')
 # Get first five intervals around POMC gene on chromosome two.
 >>> tiles.query_region('regions', 2, 25132492, 25192278, limit=5)
