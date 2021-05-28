@@ -220,12 +220,10 @@ def query_intersects_result(result, start, end):
 def filter_results(results, start, end, limit):
     length = 0
     filtered_length = 0
-    i = 0
-    while filtered_length < limit and i < results.size:
-        if query_intersects_result(results[i], start, end):
+    while filtered_length < limit and length < results.size:
+        if query_intersects_result(results[length], start, end):
             filtered_length += 1
         length += 1
-        i += 1
     filtered_results = np.empty(filtered_length, dtype=results.dtype)
     filtered_length = 0
     for i in range(length):
