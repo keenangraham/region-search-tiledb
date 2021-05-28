@@ -46,7 +46,7 @@ done
     ('ENCFF001SOF.bed.gz', 25142665, 25142815),
 ]
 # Get total number of intervals in that region.
->>> len(tiles.query_region('regions1', 2, 25132492, 25192278, limit=1000))
+>>> len(tiles.query_region('regions', 2, 25132492, 25192278, limit=1000))
 52
 # Get files with intervals in that region.
 >>> tiles.query_file('regions', 2, 25132492, 25192278)
