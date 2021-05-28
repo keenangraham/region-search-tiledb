@@ -9,7 +9,13 @@ Ingest and query genomic intervals from multiple BED files.
 # Get paths to local BED files.
 >>> files = sorted(glob.glob('/path/to/beds/*.bed.gz'))
 >>> files[:5]
-['ENCFF001SOF.bed.gz', 'ENCFF001SOH.bed.gz', 'ENCFF001SOM.bed.gz', 'ENCFF001SON.bed.gz', 'ENCFF001SOO.bed.gz']
+[
+    'ENCFF001SOF.bed.gz',
+    'ENCFF001SOH.bed.gz',
+    'ENCFF001SOM.bed.gz',
+    'ENCFF001SON.bed.gz',
+    'ENCFF001SOO.bed.gz',
+]
 # Create chromosome by genomic position database.
 >>> tiles.create_region_array('regions')
 # Load first five BEDs into tileDB.
