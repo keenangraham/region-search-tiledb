@@ -1,0 +1,9 @@
+numba==0.53.1
+numpy==1.20.3
+pandas==1.2.4
+pybedtools==0.8.2
+pysam==0.16.0.1
+requests==2.25.1
+six==1.16.0
+tiledb==0.8.9
+urllib3==1.26.4
