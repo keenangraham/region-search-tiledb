@@ -195,6 +195,20 @@ def generate_positions_from_regions(file_index, file_, gap):
     )
 
 
+def write_data_for_file(open_array, file_index, file_):
+    print('generating positions')
+    chroms, positions, data = zip(
+        *generate_positions_from_regions(
+            file_index,
+            file_,
+            GAP
+        )
+    )
+    print('writing data')
+    open_array[chroms, positions] = list(data)
+    print('done')
+
+
 @nb.njit
 def query_intersects_result(result, start, end):
     # f1 -> start, f2 -> end.
