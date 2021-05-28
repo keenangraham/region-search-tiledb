@@ -211,7 +211,7 @@ def write_data_for_file(open_array, file_index, file_):
 
 @nb.njit
 def query_intersects_result(result, start, end):
-    # f1 -> start, f2 -> end.
+    # f1 -> result_start, f2 -> result_end
     return (result['f2'] >= start) and (result['f1'] <= end)
 
 
