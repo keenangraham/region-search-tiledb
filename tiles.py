@@ -288,7 +288,7 @@ def load_local(database, files):
             print(i)
             file_ = get_local_bed_file(filepath)
             accession = filepath.split('/')[-1].replace('.bed.gz', '')
-            file_index = find_index(filepath.split('/')[-1])
+            file_index = find_index(accession)
             print(accession, file_index)
             write_data_for_file(A, file_index, file_)
 
