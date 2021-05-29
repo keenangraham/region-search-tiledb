@@ -174,13 +174,9 @@ def get_positions_for_region(start, end, gap):
     )
 
 
-def get_fill_value_for_region(filename, start, end):
-    return (filename, start, end)
-
-
 def get_data_for_region(file_index, region, gap):
    chrom, start, end = region
-   fill_value = get_fill_value_for_region(file_index, start, end)
+   fill_value = (file_index, start, end)
    return (
        (chrom, position, fill_value)
        for position in get_positions_for_region(start, end, gap)
